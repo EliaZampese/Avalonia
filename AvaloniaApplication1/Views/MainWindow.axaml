@@ -14,10 +14,20 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainViewModel />
     </Design.DataContext>
-
-    <TextBlock Text="Titolo"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Titolo"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" />
+        <Grid>
+            <TextBox Grid.Column="0" PlaceholderText="Inserisci il nome..." />
+            <Button Grid.Column="1" Margin="10,0,0,0"
+                    Content="Aggiungi" />
+        </Grid>
+    </StackPanel>
+    
     
 
 </Window>
